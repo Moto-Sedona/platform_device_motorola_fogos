@@ -27,6 +27,8 @@ BOARD_KERNEL_CMDLINE += androidboot.hab.product=fogos
 TARGET_KERNEL_CONFIG := vendor/fogos-qgki-inline_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/fogos
 
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/configs/modules.load))
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/configs/modules.blocklist
